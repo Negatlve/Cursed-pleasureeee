@@ -1,13 +1,37 @@
+# === ЖЁСТКИЙ .gitignore для Ren'Py визуальной новеллы ===
+
+# Скомпилированные файлы Ren'Py (всегда игнорим)
+*.rpyc
+*.rpyb
+*.rpymc
+*.pyo
+*.pyc
+
+# Кэш и сохранения игроков
 cache/
 saves/
-*.rpyc
-*.rpymc
-*.rpyb
-*.bak
+
+# Логи, временные и бэкапы
 log.txt
 *.log
 *.tmp
+*.bak
 
-# === Твои большие папки (как ты просил) ===
-images/
-videos/
+# Большие и ненужные папки (их можно не хранить в репозитории)
+gui/
+libs/
+ttf/
+tl/
+__pycache__/
+
+# === ЭТИ ПАПКИ И ФАЙЛЫ — НЕ ИГНОРИМ (они главные) ===
+# images/          ← все рендеры
+# videos/          ← все анимации
+# audio/           ← музыка и звуки
+# script.rpy
+# v0.2.rpy
+# gallery.rpy
+# options.rpy
+# screens.rpy
+# phone.rpy
+# .gitignore
