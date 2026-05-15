@@ -1,0 +1,13 @@
+cache/
+saves/
+*.rpyc
+*.rpymc
+*.rpyb
+*.bak
+log.txt
+*.log
+*.tmp
+
+# === Твои большие папки (как ты просил) ===
+images/
+videos/
