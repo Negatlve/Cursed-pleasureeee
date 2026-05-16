@@ -9,6 +9,8 @@ image anim84 = Movie(play="videos/anim84.webm", loop=False)
 image anim85 = Movie(play="videos/anim85.webm", loop=True)
 image anim86 = Movie(play="videos/anim86.webm", loop=True)
 image anim87 = Movie(play="videos/anim87.webm", loop=True)
+image anim88 = Movie(play="videos/anim88.webm", loop=True)
+image anim89 = Movie(play="videos/anim89.webm", loop=False)
 label v02_start:
     scene black with fade
     centered "v0.2 — Вторая половина дня"
@@ -387,7 +389,10 @@ label view_anim86:
     you "Хороший вид... продолжай."
     l "Не разговаривай со мной."
 
-    you "Тогда просто дрочи. Я хочу это видеть."
+    you "Тогда просто дрочи"
+    you "Теперь возьми его в обе руки"
+    l "..."
+
 
     $ handjob_seen.add("86")
     $ current_handjob_anim = "86"
@@ -404,10 +409,13 @@ label view_anim87:
     show screen handjob_anim87
     show screen handjob_controls
 
-    you "Уже двумя руками... молодец."
-    l "Заткнись, ублюдок."
+    you "Так намного лучше... Молодец, тётя."
+    l "Заткнись..."
+    
+    you "Если тебе будет легче — можешь представить, что ты дрочишь не мне, а Коннору."
 
-    you "Не останавливайся. Мне нравится, как ты стараешься."
+    l "Иди нахуй. И никогда больше не говори про него."
+   
 
     $ handjob_seen.add("87")
     $ current_handjob_anim = "87"
@@ -424,15 +432,17 @@ label view_anim88:
     show screen handjob_anim88
     show screen handjob_controls
 
-    you "Продолжай... хорошо получается."
+    you "Продолжай. Уже не так сильно морщишься, как в начале."
     l "Я тебя презираю..."
-
-    you "Я знаю. И всё равно дрочишь. Продолжай."
-
+    you "Вижу. Но руки почему-то всё равно работают. Продолжай."
+    l "..."
+    l "Скоро уже?"
+    you "Очень скоро."
+    l "Только предупреди, я не хочу, чтобы ты....."
     $ handjob_seen.add("88")
     $ current_handjob_anim = "88"
     pause
-   
+    
 
 
 label handjob_cum:
@@ -445,7 +455,8 @@ label handjob_cum:
     show screen handjob_anim89
     pause
     hide screen handjob_anim89
-
+    scene 347
+    you "Оооо, это было охуенно."
     jump v02_end
 label linda_footjob:
     scene 328 with dissolve
