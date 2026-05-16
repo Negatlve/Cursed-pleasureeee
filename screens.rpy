@@ -3,6 +3,8 @@
 ################################################################################
 
 init offset = -1
+
+default current_anim = "85"
 transform about_appear:
     alpha 0.0
     yoffset 30
@@ -2241,3 +2243,51 @@ screen tooltip(text=""):
             color "#88FFFF"
             outlines [(4, "#003333", 0, 0), (2, "#aaffff", 0, 0)]
             text_align 0.5
+screen handjob_controls():
+    zorder 200
+    modal False
+
+    frame:
+        xalign 0.95
+        yalign 0.5
+        xsize 200
+        background "#1a1a2ecc"
+
+        vbox:
+            spacing 12
+            xalign 0.5
+
+            textbutton "Next":
+                action Function(NextHandjobView)
+                xsize 160
+
+            textbutton "Back":
+                action Function(BackHandjobView)
+                xsize 160
+
+            null height 20
+
+            if len(handjob_seen) >= 4:
+                textbutton "Cum":
+                    action Jump("handjob_cum")
+                    xsize 160
+                    text_color "#ff4444"
+screen handjob_anim85():
+    zorder 0
+    add "anim85" at fullscreen
+
+screen handjob_anim86():
+    zorder 0
+    add "anim86" at fullscreen
+
+screen handjob_anim87():
+    zorder 0
+    add "anim87" at fullscreen
+
+screen handjob_anim88():
+    zorder 0
+    add "anim88" at fullscreen
+
+screen handjob_anim89():
+    zorder 0
+    add "anim89" at fullscreen                

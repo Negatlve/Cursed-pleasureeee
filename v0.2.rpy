@@ -4,7 +4,11 @@
 default linda_tried_open = False
 default linda_tried_kick = False
 default linda_body_hover = "none"
+
 image anim84 = Movie(play="videos/anim84.webm", loop=False)
+image anim85 = Movie(play="videos/anim85.webm", loop=True)
+image anim86 = Movie(play="videos/anim86.webm", loop=True)
+image anim87 = Movie(play="videos/anim87.webm", loop=True)
 label v02_start:
     scene black with fade
     centered "v0.2 — Вторая половина дня"
@@ -356,6 +360,93 @@ label linda_handjob:
     you "Как раз твоими руками я и собираюсь пользоваться. Приступай, тетя"
     l "..урод"
     
+
+    show screen handjob_anim85
+    show screen handjob_controls
+
+    you "Вот так... не останавливайся."
+    l "Заткнись..."
+
+    you "Сильнее. Не расслабляйся."
+
+    $ handjob_seen.add("85")
+    $ current_handjob_anim = "85"
+    pause
+    
+
+
+label view_anim86:
+    hide screen handjob_anim85
+    hide screen handjob_anim86
+    hide screen handjob_anim87
+    hide screen handjob_anim88
+
+    show screen handjob_anim86
+    show screen handjob_controls
+
+    you "Хороший вид... продолжай."
+    l "Не разговаривай со мной."
+
+    you "Тогда просто дрочи. Я хочу это видеть."
+
+    $ handjob_seen.add("86")
+    $ current_handjob_anim = "86"
+    pause
+    
+
+
+label view_anim87:
+    hide screen handjob_anim85
+    hide screen handjob_anim86
+    hide screen handjob_anim87
+    hide screen handjob_anim88
+
+    show screen handjob_anim87
+    show screen handjob_controls
+
+    you "Уже двумя руками... молодец."
+    l "Заткнись, ублюдок."
+
+    you "Не останавливайся. Мне нравится, как ты стараешься."
+
+    $ handjob_seen.add("87")
+    $ current_handjob_anim = "87"
+    pause
+    
+
+
+label view_anim88:
+    hide screen handjob_anim85
+    hide screen handjob_anim86
+    hide screen handjob_anim87
+    hide screen handjob_anim88
+
+    show screen handjob_anim88
+    show screen handjob_controls
+
+    you "Продолжай... хорошо получается."
+    l "Я тебя презираю..."
+
+    you "Я знаю. И всё равно дрочишь. Продолжай."
+
+    $ handjob_seen.add("88")
+    $ current_handjob_anim = "88"
+    pause
+   
+
+
+label handjob_cum:
+    hide screen handjob_controls
+    hide screen handjob_anim85
+    hide screen handjob_anim86
+    hide screen handjob_anim87
+    hide screen handjob_anim88
+
+    show screen handjob_anim89
+    pause
+    hide screen handjob_anim89
+
+    jump v02_end
 label linda_footjob:
     scene 328 with dissolve
     "Линда поднимает ноги из воды и зажимает твой член ступнями."
