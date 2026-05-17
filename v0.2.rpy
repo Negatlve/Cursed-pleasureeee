@@ -11,6 +11,12 @@ image anim86 = Movie(play="videos/anim86.webm", loop=True)
 image anim87 = Movie(play="videos/anim87.webm", loop=True)
 image anim88 = Movie(play="videos/anim88.webm", loop=True)
 image anim89 = Movie(play="videos/anim89.webm", loop=False)
+image anim15 = Movie(play="videos/anim15.webm", loop=True)
+image anim16 = Movie(play="videos/anim16.webm", loop=True)
+image anim90 = Movie(play="videos/anim90.webm", loop=True)
+image anim17 = Movie(play="videos/anim17.webm", loop=False)
+image anim91 = Movie(play="videos/anim91.webm", loop=False)
+
 label v02_start:
     scene black with fade
     centered "v0.2 — Вторая половина дня"
@@ -540,9 +546,148 @@ label linda_footjob:
     jump v02_end
 
 label linda_boobjob:
-    scene 329 with dissolve
-    "Линда встаёт на колени в ванне и сжимает твой член между своих больших сисек."
-    "Она дрочит тебе сиськами, пока ты не кончаешь ей в лицо."
+    scene 331 with dissolve
+    "Ты снимаешь трусы."
+
+    scene 332 with dissolve
+    you "Смотри."
+
+    scene 359 with dissolve
+    you "Возьми сиськи в руки и сожми их."
+
+    scene 360 with dissolve
+    "Линда неохотно сжимает груди."
+
+    scene 361 with dissolve
+    "Ты кладёшь руки ей на плечи и вставляешь член между сисек."
+    you "Держи. Сейчас буду трахать."
+
+    show screen boobjob_anim15
+    show screen boobjob_controls
+
+    you "Вот так..."
+    l "Ублюдок..."
+
+    $ boobjob_seen.add("15")
+    $ current_boobjob_anim = "15"
+    pause
+
+# ==================== ВИДЫ ====================
+
+label boobjob_view15:
+    hide screen boobjob_anim15
+    hide screen boobjob_anim90
+    hide screen boobjob_anim16
+    show screen boobjob_anim15
+    show screen boobjob_controls
+
+    you "Хороший вид..."
+    l "..."
+
+    $ boobjob_seen.add("15")
+    $ current_boobjob_anim = "15"
+    pause
+
+label boobjob_view90:
+    hide screen boobjob_anim15
+    hide screen boobjob_anim90
+    hide screen boobjob_anim16
+    show screen boobjob_anim90
+    show screen boobjob_controls
+
+    you "Смотри, как он полностью тонет между ними."
+    l "Заткнись..."
+
+    $ boobjob_seen.add("90")
+    $ current_boobjob_anim = "90"
+    pause
+
+label boobjob_view16:
+    hide screen boobjob_anim15
+    hide screen boobjob_anim90
+    hide screen boobjob_anim16
+    show screen boobjob_anim16
+    show screen boobjob_controls
+
+    you "Теперь я сам буду двигать твои руки."
+    "Ты накрываешь её ладони своими и начинаешь жёстко трахать её грудь."
+    l "Ах... не так сильно!"
+
+    $ boobjob_seen.add("16")
+    $ current_boobjob_anim = "16"
+    pause
+
+# ==================== ВЫБОР КУДА КОНЧИТЬ ====================
+
+label boobjob_choose_cum:
+    hide screen boobjob_controls
+    hide screen boobjob_anim15
+    hide screen boobjob_anim90
+    hide screen boobjob_anim16
+
+    menu:
+        "Кончить ей на лицо":
+            jump boobjob_cum_face
+        "Кончить ей на сиськи":
+            jump boobjob_cum_tits
+
+# ==================== КОНЧИТЬ НА ЛИЦО ====================
+
+label boobjob_cum_face:
+    $ renpy.movie_cutscene("videos/anim17.webm")
+
+    scene 372 with dissolve
+    you "Ааааа... на лицо!"
+
+    scene 373 with dissolve
+    "Линда злобно отталкивает твою руку."
+
+    scene 376 with dissolve
+    l "Ты кончил мне на лицо..."
+
+    scene 377 with dissolve
+    "Раздаётся стук в дверь."
+
+    scene 378 with dissolve
+    s "Мам! Мне срочно нужно!"
+
+    scene 380 with dissolve
+    scene 379 with dissolve
+
+    if persistent.linda_door_locked:
+        l "Сара, подожди минуту! Забери мои вещи из машины!"
+        scene 385 with dissolve
+        you "Хорошо соображаешь."
+        scene 386 with dissolve
+        you "Мне пора."
+        jump v02_end
+    else:
+        scene 381 with dissolve
+        s "Мам, я вхожу— Что за хуйня?!"
+
+        scene 382 with dissolve
+        l "Сара! Убирайся!"
+
+        scene 384 with dissolve
+        scene 385 with dissolve
+        you "Теперь она всё знает."
+        scene 386 with dissolve
+        you "Ладно, тётя. Я пойду."
+        jump v02_end
+
+# ==================== КОНЧИТЬ НА СИСЬКИ ====================
+
+label boobjob_cum_tits:
+    $ renpy.movie_cutscene("videos/anim91.webm")
+
+    scene 372 with dissolve
+    you "Беру на сиськи..."
+
+    scene 385 with dissolve
+    you "Выглядишь хорошо с моей спермой на груди."
+
+    scene 386 with dissolve
+    you "Ладно. Мне пора."
     jump v02_end
 
 label v02_end:

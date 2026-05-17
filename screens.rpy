@@ -2291,3 +2291,44 @@ screen handjob_anim88():
 screen handjob_anim89():
     zorder 0
     add "anim89" at fullscreen                
+screen boobjob_anim15():
+    zorder 0
+    add "anim15" at fullscreen
+
+screen boobjob_anim90():
+    zorder 0
+    add "anim90" at fullscreen
+
+screen boobjob_anim16():
+    zorder 0
+    add "anim16" at fullscreen
+
+screen boobjob_controls():
+    zorder 200
+    modal False
+
+    frame:
+        xalign 0.95
+        yalign 0.5
+        xsize 200
+        background "#1a1a2ecc"
+
+        vbox:
+            spacing 12
+            xalign 0.5
+
+            textbutton "Next":
+                action Function(NextBoobjobView)
+                xsize 160
+
+            textbutton "Back":
+                action Function(BackBoobjobView)
+                xsize 160
+
+            null height 20
+
+            if len(boobjob_seen) >= 3:
+                textbutton "Cum":
+                    action Jump("boobjob_choose_cum")
+                    xsize 160
+                    text_color "#ff4444"

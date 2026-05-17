@@ -1,6 +1,8 @@
 # ===================== ПЕРЕМЕННЫЕ =====================
 default handjob_seen = set()
 default current_handjob_anim = "85"
+default boobjob_seen = set()
+default current_boobjob_anim = "15"
 
 
 # ===================== ФУНКЦИИ =====================
@@ -53,3 +55,22 @@ init python:
         renpy.hide_screen("handjob_anim88")
 
         renpy.show_screen("handjob_anim" + current_handjob_anim)
+init python:
+
+    def NextBoobjobView():
+        global current_boobjob_anim
+        if current_boobjob_anim == "15":
+            renpy.jump("boobjob_view90")
+        elif current_boobjob_anim == "90":
+            renpy.jump("boobjob_view16")
+        elif current_boobjob_anim == "16":
+            renpy.jump("boobjob_view15")
+
+    def BackBoobjobView():
+        global current_boobjob_anim
+        if current_boobjob_anim == "15":
+            renpy.jump("boobjob_view16")
+        elif current_boobjob_anim == "90":
+            renpy.jump("boobjob_view15")
+        elif current_boobjob_anim == "16":
+            renpy.jump("boobjob_view90")        
