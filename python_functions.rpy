@@ -56,21 +56,30 @@ init python:
 
         renpy.show_screen("handjob_anim" + current_handjob_anim)
 init python:
-
     def NextBoobjobView():
         global current_boobjob_anim
+        hide_all_boobjob_anims()
+        
         if current_boobjob_anim == "15":
             renpy.jump("boobjob_view90")
         elif current_boobjob_anim == "90":
             renpy.jump("boobjob_view16")
         elif current_boobjob_anim == "16":
-            renpy.jump("boobjob_view15")
+            renpy.jump("boobjob_view15")  # цикл
 
     def BackBoobjobView():
         global current_boobjob_anim
+        hide_all_boobjob_anims()
+        
         if current_boobjob_anim == "15":
             renpy.jump("boobjob_view16")
         elif current_boobjob_anim == "90":
             renpy.jump("boobjob_view15")
         elif current_boobjob_anim == "16":
-            renpy.jump("boobjob_view90")        
+            renpy.jump("boobjob_view90")
+
+    def hide_all_boobjob_anims():
+        renpy.hide_screen("boobjob_anim15")
+        renpy.hide_screen("boobjob_anim90")
+        renpy.hide_screen("boobjob_anim16")
+        renpy.restart_interaction()

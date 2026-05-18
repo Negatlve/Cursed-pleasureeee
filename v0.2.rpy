@@ -558,19 +558,20 @@ label linda_boobjob:
     scene 360 with dissolve
     "Линда неохотно сжимает груди."
 
-    scene 361 with dissolve
+    scene 361 with dissolve          # ← исправлено на правильный фон
     "Ты кладёшь руки ей на плечи и вставляешь член между сисек."
     you "Держи. Сейчас буду трахать."
 
-    show screen boobjob_anim15
-    show screen boobjob_controls
+   
 
     you "Вот так..."
     l "Ублюдок..."
 
     $ boobjob_seen.add("15")
     $ current_boobjob_anim = "15"
+    $ renpy.restart_interaction()
     pause
+
 
 # ==================== ВИДЫ ====================
 
@@ -578,6 +579,7 @@ label boobjob_view15:
     hide screen boobjob_anim15
     hide screen boobjob_anim90
     hide screen boobjob_anim16
+    
     show screen boobjob_anim15
     show screen boobjob_controls
 
@@ -586,12 +588,15 @@ label boobjob_view15:
 
     $ boobjob_seen.add("15")
     $ current_boobjob_anim = "15"
+    $ renpy.restart_interaction()
     pause
+
 
 label boobjob_view90:
     hide screen boobjob_anim15
     hide screen boobjob_anim90
     hide screen boobjob_anim16
+   
     show screen boobjob_anim90
     show screen boobjob_controls
 
@@ -600,12 +605,15 @@ label boobjob_view90:
 
     $ boobjob_seen.add("90")
     $ current_boobjob_anim = "90"
+    $ renpy.restart_interaction()
     pause
+
 
 label boobjob_view16:
     hide screen boobjob_anim15
     hide screen boobjob_anim90
     hide screen boobjob_anim16
+   
     show screen boobjob_anim16
     show screen boobjob_controls
 
@@ -615,7 +623,9 @@ label boobjob_view16:
 
     $ boobjob_seen.add("16")
     $ current_boobjob_anim = "16"
+    $ renpy.restart_interaction()
     pause
+
 
 # ==================== ВЫБОР КУДА КОНЧИТЬ ====================
 
@@ -624,6 +634,8 @@ label boobjob_choose_cum:
     hide screen boobjob_anim15
     hide screen boobjob_anim90
     hide screen boobjob_anim16
+    
+    scene 369        # ← исправлено! теперь правильный фон
 
     menu:
         "Кончить ей на лицо":
@@ -631,12 +643,13 @@ label boobjob_choose_cum:
         "Кончить ей на сиськи":
             jump boobjob_cum_tits
 
+
 # ==================== КОНЧИТЬ НА ЛИЦО ====================
 
 label boobjob_cum_face:
     $ renpy.movie_cutscene("videos/anim17.webm")
 
-    scene 372 with dissolve
+    scene 372 
     you "Ааааа... на лицо!"
 
     scene 373 with dissolve
@@ -674,6 +687,7 @@ label boobjob_cum_face:
         scene 386 with dissolve
         you "Ладно, тётя. Я пойду."
         jump v02_end
+
 
 # ==================== КОНЧИТЬ НА СИСЬКИ ====================
 

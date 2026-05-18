@@ -2308,14 +2308,11 @@ screen boobjob_controls():
     modal False
 
     frame:
-        xalign 0.95
-        yalign 0.5
-        xsize 200
+        xalign 0.95 yalign 0.5 xsize 200
         background "#1a1a2ecc"
 
         vbox:
-            spacing 12
-            xalign 0.5
+            spacing 12 xalign 0.5
 
             textbutton "Next":
                 action Function(NextBoobjobView)
