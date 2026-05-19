@@ -56,30 +56,56 @@ init python:
 
         renpy.show_screen("handjob_anim" + current_handjob_anim)
 init python:
+
     def NextBoobjobView():
-        global current_boobjob_anim
-        hide_all_boobjob_anims()
-        
-        if current_boobjob_anim == "15":
-            renpy.jump("boobjob_view90")
-        elif current_boobjob_anim == "90":
-            renpy.jump("boobjob_view16")
-        elif current_boobjob_anim == "16":
-            renpy.jump("boobjob_view15")  # цикл
+        order = ["15", "90", "16"]
 
-    def BackBoobjobView():
         global current_boobjob_anim
-        hide_all_boobjob_anims()
-        
-        if current_boobjob_anim == "15":
-            renpy.jump("boobjob_view16")
-        elif current_boobjob_anim == "90":
-            renpy.jump("boobjob_view15")
-        elif current_boobjob_anim == "16":
-            renpy.jump("boobjob_view90")
 
-    def hide_all_boobjob_anims():
+        if current_boobjob_anim in order:
+            idx = order.index(current_boobjob_anim)
+            if idx < len(order) - 1:
+                current_boobjob_anim = order[idx + 1]
+            else:
+                current_boobjob_anim = order[0]
+        else:
+            current_boobjob_anim = "15"
+
+        boobjob_seen.add(current_boobjob_anim)
+
         renpy.hide_screen("boobjob_anim15")
         renpy.hide_screen("boobjob_anim90")
         renpy.hide_screen("boobjob_anim16")
-        renpy.restart_interaction()
+
+        renpy.show_screen("boobjob_anim" + current_boobjob_anim)
+
+        # обновляем controls, чтобы Cum появился сразу при 3+ просмотрах
+        renpy.hide_screen("boobjob_controls")
+        renpy.show_screen("boobjob_controls")
+
+
+    def BackBoobjobView():
+        order = ["15", "90", "16"]
+
+        global current_boobjob_anim
+
+        if current_boobjob_anim in order:
+            idx = order.index(current_boobjob_anim)
+            if idx > 0:
+                current_boobjob_anim = order[idx - 1]
+            else:
+                current_boobjob_anim = order[-1]
+        else:
+            current_boobjob_anim = "15"
+
+        boobjob_seen.add(current_boobjob_anim)
+
+        renpy.hide_screen("boobjob_anim15")
+        renpy.hide_screen("boobjob_anim90")
+        renpy.hide_screen("boobjob_anim16")
+
+        renpy.show_screen("boobjob_anim" + current_boobjob_anim)
+
+        # обновляем controls
+        renpy.hide_screen("boobjob_controls")
+        renpy.show_screen("boobjob_controls")
