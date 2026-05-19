@@ -745,40 +745,41 @@ label boobjob_cum_tits:
 
     $ renpy.movie_cutscene("videos/anim91.webm")
 
-    scene 372 
+    scene 388 
     you "Оооо... блять, да... кончил прямо на твои сиськи..."
 
-    scene 373 with dissolve
+    scene 389 with dissolve
     l "Ты... ты совсем охуел?! Опять кончил на меня, ублюдок?!"
 
-    scene 374 with dissolve
     you "Не смог сдержаться, тётя. Твои сиськи такие большие... идеально подошли."
 
-    scene 376 with dissolve
+    scene 390 with dissolve
     l "Ты кончил мне на грудь... смотри, сколько его..."
 
-    scene 377 with dissolve
+    scene 391 with dissolve
     "Раздаётся стук в дверь."
 
-    scene 378 with dissolve
+    scene 392 with dissolve
     s "Мам! Мне срочно нужно! Открывай уже!"
+    scene 393 with dissolve
+    #кадр где линда и гг повернулись на дверь и линда что-то отвечает саре.
 
     if persistent.linda_door_locked:
 
         # === ВЕТКА: ДВЕРЬ ЗАКРЫТА ===
-        scene 379 with dissolve
+        scene 380 with dissolve
         s "Мам, ну серьёзно! У меня нет времени ждать!"
         s "Открой замок, я быстро!"
 
-        scene 380 with dissolve
+        scene 396 with dissolve
         l "Пару минут, дочь! Сходи пока к машине, забери мою одежду!"
 
         s "Пфф... окей, но давай быстрее!"
 
-        scene 385 with dissolve
+        scene 398 with dissolve
         you "Хех... быстро соображаешь, тётя. Даже свою дочь смогла отшить."
 
-        scene 386 with dissolve
+        scene 387 with dissolve
         you "Ладно, пора выбираться. Но мы ещё не закончили, тётя."
 
         l "Ты помнишь наш договор?"
@@ -816,3 +817,9 @@ label boobjob_cum_tits:
         you "Конечно. Пока, тётя."
 
         jump v02_end
+        return
+label v02_end:
+    scene black with fade
+    "На этом обновление 0.2 заканчивается."
+    "Пока что. Но мы ещё вернёмся..."
+    jump show_epilogue
