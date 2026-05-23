@@ -547,7 +547,7 @@ label linda_footjob:
 
 label linda_boobjob:
     scene 331 with dissolve
-    you "Хех, сейчас сниму трусы."
+    
 
     scene 332 with dissolve
     you "Ну как? Нравится вид?"
