@@ -16,7 +16,7 @@ define moth = Character("Monica's thoughts", color="#ffcc99")
 define m    = Character("Mila",  color="#44ccff")
 # Линда — тётя, тёплый коралловый
 define l    = Character("Linda", color="#CC00CC")
-default lth = Character("Linda's thoughts",  color="#E040E0")
+default lth = Character("Linda's thoughts", color="#AC6DA1", what_prefix="{i}", what_suffix="{/i}")
 # Сара — зелёный (по твоему желанию)
 define s    = Character("Sarah", color="#66ff88")  # яркий салатовый
 default sth = Character("Sarah's thoughts",   color="#88ffaa")  # чуть светлее для мыслей
