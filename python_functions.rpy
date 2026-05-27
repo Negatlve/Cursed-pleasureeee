@@ -109,3 +109,63 @@ init python:
         # обновляем controls
         renpy.hide_screen("boobjob_controls")
         renpy.show_screen("boobjob_controls")
+default footjob_seen = set()
+default current_footjob_anim = "18"
+
+# ===================== ФУНКЦИИ =====================
+init python:
+
+    def NextFootjobView():
+        order = ["18", "19", "21", "22"]
+
+        global current_footjob_anim
+
+        if current_footjob_anim in order:
+            idx = order.index(current_footjob_anim)
+            if idx < len(order) - 1:
+                current_footjob_anim = order[idx + 1]
+            else:
+                current_footjob_anim = order[0]
+        else:
+            current_footjob_anim = "18"
+
+        footjob_seen.add(current_footjob_anim)
+
+        renpy.hide_screen("footjob_anim18")
+        renpy.hide_screen("footjob_anim19")
+        renpy.hide_screen("footjob_anim21")
+        renpy.hide_screen("footjob_anim22")
+
+        renpy.show_screen("footjob_anim" + current_footjob_anim)
+
+        # обновляем controls, чтобы Cum появился сразу при 4+ просмотрах
+        renpy.hide_screen("footjob_controls")
+        renpy.show_screen("footjob_controls")
+
+
+    def BackFootjobView():
+        order = ["18", "19", "21", "22"]
+
+        global current_footjob_anim
+
+        if current_footjob_anim in order:
+            idx = order.index(current_footjob_anim)
+            if idx > 0:
+                current_footjob_anim = order[idx - 1]
+            else:
+                current_footjob_anim = order[-1]
+        else:
+            current_footjob_anim = "18"
+
+        footjob_seen.add(current_footjob_anim)
+
+        renpy.hide_screen("footjob_anim18")
+        renpy.hide_screen("footjob_anim19")
+        renpy.hide_screen("footjob_anim21")
+        renpy.hide_screen("footjob_anim22")
+
+        renpy.show_screen("footjob_anim" + current_footjob_anim)
+
+        # обновляем controls
+        renpy.hide_screen("footjob_controls")
+        renpy.show_screen("footjob_controls")        

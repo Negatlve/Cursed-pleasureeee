@@ -2329,3 +2329,48 @@ screen boobjob_controls():
                     action Jump("boobjob_choose_cum")
                     xsize 160
                     text_color "#ff4444"
+screen footjob_controls():
+    zorder 200
+    modal False
+
+    frame:
+        xalign 0.95
+        yalign 0.5
+        xsize 200
+        background "#1a1a2ecc"
+
+        vbox:
+            spacing 12
+            xalign 0.5
+
+            textbutton "Next":
+                action Function(NextFootjobView)
+                xsize 160
+
+            textbutton "Back":
+                action Function(BackFootjobView)
+                xsize 160
+
+            null height 20
+
+            if len(footjob_seen) >= 4:
+                textbutton "Cum":
+                    action Jump("footjob_cum")
+                    xsize 160
+                    text_color "#ff4444"
+
+screen footjob_anim18():
+    zorder 0
+    add "anim18" at fullscreen
+
+screen footjob_anim19():
+    zorder 0
+    add "anim19" at fullscreen
+
+screen footjob_anim21():
+    zorder 0
+    add "anim21" at fullscreen
+
+screen footjob_anim22():
+    zorder 0
+    add "anim22" at fullscreen                    
