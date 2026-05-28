@@ -592,9 +592,9 @@ label footjob_view19:
     show screen footjob_anim19
     show screen footjob_controls
     #анимация вид сбоку 
-    you "Не за что..Кайфую от твоего сарказма, не останавливайся,"
-    l ""
-    you ""
+    you "Не за что..Кайфую от твоего сарказма, не останавливайся"
+    l "Убери руки с моих ног, раз уж ты такой щедрый. Я могу сама справиться"
+    you "Как хочешь"
     $ footjob_seen.add("19")
     $ current_footjob_anim = "19"
     pause
@@ -610,8 +610,9 @@ label footjob_view21:
     show screen footjob_controls
 
     #анимация без помощи рук гг
-    you ""
-    l ""
+    you "Умело так трёшь... Видимо, Конор часто просил именно это?"
+    l "Заткнись! Не смей трогать эту тему, я тебя предупреждаю!"
+    you "Расслабься, тёть. Просто констатирую факт"
 
     $ footjob_seen.add("21")
     $ current_footjob_anim = "21"
@@ -627,9 +628,9 @@ label footjob_view22:
     show screen footjob_anim22
     show screen footjob_controls
     #анимация без помощи гг, вид сбоку. 
-    you " "
+    you "Чёрт возьми... это намного лучше, чем я думал..."
     l "Скоро ты уже кончишь или будешь меня мучить вечно?"
-    you "Думаю, скоро"
+    you "Скоро, если постараешься"
     $ footjob_seen.add("22")
     $ current_footjob_anim = "22"
     pause
@@ -643,13 +644,13 @@ label footjob_cum:
     hide screen footjob_anim22
 
     scene 408 
-    you "Бля, я уже на грани... Держи ножки крепче."
+    you "Бля, я уже на грани... Держи ножки крепче"
     l "Только не на меня! Слышишь? Не смей кончать на мои ноги!"
 
     scene 409 with dissolve
-    l "Отвернись... я не хочу это видеть. Делай своё дело и проваливай."
-    you "Смотри или нет — я всё равно залью тебя."
-
+    #сцена перед тем как гг кончит
+    you ""
+    l ""
     $ renpy.movie_cutscene("videos/anim23.webm")
 
     scene 410 
