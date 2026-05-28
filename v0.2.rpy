@@ -592,7 +592,7 @@ label footjob_view19:
     show screen footjob_anim19
     show screen footjob_controls
     #анимация вид сбоку 
-    you " "
+    you "Не за что..Кайфую от твоего сарказма, не останавливайся,"
     l ""
     you ""
     $ footjob_seen.add("19")
