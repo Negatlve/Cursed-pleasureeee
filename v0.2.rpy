@@ -575,8 +575,9 @@ label linda_footjob:
     show screen footjob_anim18
     show screen footjob_controls
     #анимация pov
-    you ".."
-    l ""
+    you "Ммм... они такие мягкие и горячие. Идеально."
+    l "Спасибо за комплимент посреди шантажа. Очень мило"
+
     $ footjob_seen.add("18")
     $ current_footjob_anim = "18"
     pause
@@ -591,9 +592,9 @@ label footjob_view19:
     show screen footjob_anim19
     show screen footjob_controls
     #анимация вид сбоку 
-    you "Сбоку ещё лучше смотрится. Двигай ножками быстрее."
-    l "Заткнись... я тебя ненавижу. Какой же ты урод."
-    you "А теперь убери руки. Хочу, чтобы ты сама мне подрочила ногами. Без моей помощи. Давай, тётя."
+    you " "
+    l ""
+    you ""
     $ footjob_seen.add("19")
     $ current_footjob_anim = "19"
     pause
@@ -625,10 +626,10 @@ label footjob_view22:
 
     show screen footjob_anim22
     show screen footjob_controls
-
-    you "Сбоку выглядит просто пиздец как горячо. Не останавливайся."
+    #анимация без помощи гг, вид сбоку. 
+    you " "
     l "Скоро ты уже кончишь или будешь меня мучить вечно?"
-
+    you "Думаю, скоро"
     $ footjob_seen.add("22")
     $ current_footjob_anim = "22"
     pause
