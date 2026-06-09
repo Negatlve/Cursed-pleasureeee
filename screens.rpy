@@ -2374,3 +2374,15 @@ screen footjob_anim21():
 screen footjob_anim22():
     zorder 0
     add "anim22" at fullscreen                    
+screen tall_scroll_helper(img, img_height=2160, start_from_bottom=True):
+    modal True
+
+    # Прокрутка (само изображение уже показано через show)
+    key "mousedown_5" action NullAction()  # вверх
+    key "mousedown_4" action NullAction()  # вниз
+
+    # Реальная прокрутка будет работать через показанное изображение, но для удобства оставляем
+    key "mouseup_1" action Return()
+    key "K_ESCAPE" action Return()
+
+    text "Колёсико ↑↓ • ЛКМ/Esc = Закрыть" size 26 color "#cccccc" xalign 0.98 yalign 0.02
