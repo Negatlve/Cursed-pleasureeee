@@ -182,14 +182,12 @@ init python:
 
     config.custom_text_tags["th"] = thought_tag
 init python:
-    def show_tall(img, height=2060, start_bottom=True):
-        """Показывает высокое изображение с прокруткой, после клика оставляет фото на фоне"""
-        renpy.scene()  # очищаем предыдущее
+    def show_tall(img, height=2060):
+        renpy.scene()
         renpy.show("expression", what=img, at_list=[Transform(
-            xpos=0.5, xanchor=0.5, 
-            ypos=-(height - 1080) if start_bottom else 0, 
+            xpos=0.5, 
+            xanchor=0.5, 
+            ypos=-(height - 1080), 
             yanchor=0.0
         )])
-        
-        # Показываем временный экран только для прокрутки
-        renpy.call_screen("tall_scroll_helper", img=img, img_height=height, start_from_bottom=start_bottom)            
+        renpy.call_screen("tall_scroll_helper")            
