@@ -169,3 +169,15 @@ init python:
         # обновляем controls
         renpy.hide_screen("footjob_controls")
         renpy.show_screen("footjob_controls")        
+init python:
+
+    def thought_tag(tag, argument, contents):
+        return [
+            (renpy.TEXT_TAG, "color=#aaaaaa"),
+            (renpy.TEXT_TAG, "i")
+        ] + contents + [
+            (renpy.TEXT_TAG, "/i"),
+            (renpy.TEXT_TAG, "/color")
+        ]
+
+    config.custom_text_tags["th"] = thought_tag        
