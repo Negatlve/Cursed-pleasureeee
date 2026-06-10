@@ -5,21 +5,6 @@ default linda_tried_open = False
 default linda_tried_kick = False
 default linda_body_hover = "none"
 
-image anim84 = Movie(play="videos/anim84.webm", loop=False)
-image anim85 = Movie(play="videos/anim85.webm", loop=True)
-image anim86 = Movie(play="videos/anim86.webm", loop=True)
-image anim87 = Movie(play="videos/anim87.webm", loop=True)
-image anim88 = Movie(play="videos/anim88.webm", loop=True)
-image anim89 = Movie(play="videos/anim89.webm", loop=False)
-image anim15 = Movie(play="videos/anim15.webm", loop=True)
-image anim16 = Movie(play="videos/anim16.webm", loop=True)
-image anim90 = Movie(play="videos/anim90.webm", loop=True)
-image anim17 = Movie(play="videos/anim17.webm", loop=False)
-image anim91 = Movie(play="videos/anim91.webm", loop=False)
-image anim18 = Movie(play="videos/anim18.webm", loop=True)
-image anim19 = Movie(play="videos/anim19.webm", loop=True)
-image anim21 = Movie(play="videos/anim21.webm", loop=True)
-image anim22 = Movie(play="videos/anim22.webm", loop=True)
 
 label v02_start:
     scene black with fade
@@ -1302,7 +1287,29 @@ label after_bath:
     #гг говорит, что доволен и теперь можешь начинать тверкать
     scene 491 with dissolve
     #мила встала в позу тверка, готовится. 
+    m "Смотри внимательно. Больше такого не будет."
+    you "Увидим"
+    show anim24 at fullscreen
+
+    window show
+    #анимация как она тверкает, диалог между гг и милой. гг своем стиле "хвалит" её, мила токсично что-то ему отвечает. 
+    you ""
     m ""
+    window hide
+    $ renpy.pause
+
+    hide anim25
+    window show
+    scene  493
+    show anim25 at fullscreen
+
+    window show
+    #та же анимация с другого ракурса как она тверкает, диалог между гг и милой. гг своем стиле "хвалит" её, мила токсично что-то ему отвечает. 
+    you ""
+    m ""
+    window hide
+    $ renpy.pause
+
 
 
 
