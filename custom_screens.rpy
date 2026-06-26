@@ -44,7 +44,7 @@ screen choice_mila_insert():
         add Text("Просто кончить", color="#aaccff", size=60):
             xpos 130 ypos 480 alpha left_alpha
         add Text("Рискнуть вставить", color="#ff8888", size=60):
-            xpos 1200 ypos 480 alpha right_alpha
+            xpos 1100 ypos 480 alpha right_alpha
 
         # Кликабельные зоны
         button:

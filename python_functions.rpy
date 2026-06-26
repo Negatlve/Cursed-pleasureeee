@@ -3,19 +3,18 @@ init python:
 
     # Все анимации, у которых должен быть loop=False (одноразовые)
     loop_false = {
-        # старые
+        #loop false
         17, 84, 89, 91,
-        # новые (24-83)
         26, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
-        54, 58, 59, 65, 66, 68, 73, 78, 80, 83
+        54, 58, 59, 65, 66, 68, 73, 78, 80, 83, 92
     }
 
     # Старые анимации (15-22 и 84-91)
     for i in [15, 16, 17, 18, 19, 21, 22, 84, 85, 86, 87, 88, 89, 90, 91]:
         renpy.image("anim" + str(i), Movie(play="videos/anim" + str(i) + ".webm", loop=(i not in loop_false)))
-
+    #loop on
     # Новые анимации 24-83
-    for i in range(24, 84):
+    for i in range(24, 999):
         renpy.image("anim" + str(i), Movie(play="videos/anim" + str(i) + ".webm", loop=(i not in loop_false)))
 # ===================== ПЕРЕМЕННЫЕ =====================
 default handjob_seen = set()
